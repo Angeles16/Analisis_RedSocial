@@ -1,0 +1,33 @@
+.material-icons { font-size: 40px; }
+
+/*#postn {
+    margin: 0;
+    padding: 0;
+    background: url(../../img/1109083.png) no-repeat center top;
+    background-size: cover;
+    font-family: sans-serif;
+
+}*/
+
+img {
+    border-radius: 1em;
+}
+
+.material-icons {
+    color: aliceblue;
+    padding-left: 5px;
+}
+
+.card-title { 
+    font-weight: bolder;
+}
+
+#fondCard {
+    background: url(../../img/2.jpg) no-repeat center top;
+    background-size: cover;
+
+    border-radius: 2em;
+    color: black;
+}
+
+

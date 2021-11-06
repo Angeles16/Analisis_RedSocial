@@ -1,0 +1,39 @@
+<div class="container my-5">
+    <div class="col-md-10 mx-auto">
+        <div class="card card-body">
+            <h1>Personas</h1>
+
+
+            <div class="row">
+
+                <div class="col-sm-6 py-3" *ngFor="let person of users" >
+                    <div class="card" id="imgFont">
+                        <div class="col-5 mx-auto pt-2">
+                            <img class="card-img-top col-12" src="{{url}}{{person.imagen}}" alt="Card image cap" height="200" *ngIf="person.imagen">
+                            <img class="card-img-top col-12" src="../../../assets/img/acces/descarga.png" alt="Card image cap" height="200" *ngIf="!person.imagen">
+                        </div>
+                        <div class="card-body">
+                          <h3 class="card-title">{{person.nombre}}</h3>
+                          <h4 class="card-title">Nik: {{person.nick}}</h4>
+                          <p class="card-text">Pais: {{person.pais}}</p>
+                          <button class="btn btn-primary me-3" (click)="addFriend(person._id)" >Agregar amigo</button>
+                          <a href="#" class="btn btn-success">Ver datos</a>
+                        </div>
+                      </div>
+                </div>
+
+        
+    
+                  <!--PAGINACION-->
+            <ul class="pagination pull-right mx-auto">
+                <li *ngIf="page > 1"><a [routerLink]="['/people', prev_page]">Anterior</a></li>
+                <li ><a [routerLink]="['/people', next_page]">Siguiente</a></li>
+            </ul>
+            </div>
+            
+
+
+
+        </div>
+    </div>
+</div>

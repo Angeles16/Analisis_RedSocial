@@ -1,0 +1,105 @@
+<div class="container pt-5">
+    <div class="row">
+
+        <div class="col-1"></div>
+
+
+        <div class="col-md-6 border me-3 bg-white">
+            <div class="jumbotron">
+                <h2 class="h2-strong">{{title}}</h2>
+            </div>
+
+            <!--Herramientas-->
+            <div class="rounded border my-4 px-3" id="postn" *ngIf="identity">
+                <form action="">
+                    <div class="form-group">
+                        <h3 for="exampleTextarea bg" class="form-label mt-4 text-white">Expresate</h3>
+                        <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                      </div>
+
+                      <div class="row form-group py-2">
+                        <div class="col-8">
+                            <input class="form-control" type="file" id="formFile">
+                        </div>
+                        <fieldset class="form-group">
+                            <legend class="mt-4">Tipo de publicacion</legend>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                                <p>Privado</p>
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+                                <p>Amigos</p>
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+                                <p>Publico </p>
+                              </label>
+                            </div>
+                          </fieldset>
+                        
+                      </div>
+                </form>
+            </div>
+
+            <!--noticias-->
+            <div class="row pt-5 bg-white">
+                <div class="col-11  mx-auto">
+                    <div class="card text-white bg-info mb-3" *ngFor="let post of publicateService.publicaciones">
+                        <div class="card-body">
+                            <h4 class="card-title">{{post.text}}</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                                content.</p>
+                        </div>
+        
+                    </div>
+
+                    <div class="card text-white bg-info mb-3">
+                      <div class="card-body">
+                          <h4 class="card-title"></h4>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                              content.</p>
+                      </div>
+      
+                  </div>
+
+                  <div class="card text-white bg-info mb-3" >
+                    <div class="card-body">
+                        <h4 class="card-title"></h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                            content.</p>
+                    </div>
+    
+                </div>
+                </div>
+            </div>
+
+        </div>
+        <!--Menu my data and data friends-->
+
+        <div class="col-md-4 " *ngIf="identity">
+            
+            <div class="card col-10 p-2 " id="fondCard">
+              <img class="card-img-top" src="{{img}}" alt="Card image cap" id="imgYo">
+              <div class="card-body mt-2 p-4" >
+                <h2 class="card-title text-center">{{dataUserView.nombre}} {{dataUserView.apellido}}</h2>
+                <h3 class="card-text">Nick: {{dataUserView.nick}}</h3>
+                <h3>Edad: {{edad}} años</h3>
+                <h2>{{dataUserView.pais}}</h2>
+                
+              </div>
+            </div>
+
+        
+
+        <div class="col-1"></div>
+
+
+    
+</div>
+</div>

@@ -1,0 +1,49 @@
+<div class="container py-5">
+    <div class="row">
+      <div class="col-md-5 ">
+        <div class="card-header bg-light">
+          <h3 class="mr-auto mb-0 pr-3">Actualizar tus datos</h3>
+        </div>
+        <div class="card card-body ">
+
+          <p>{{registerService.selectedUser._id}}</p>
+          <form #employeeForm="ngForm" (ngSubmit)="updateUser(employeeForm)">
+            <div class="form-group"> 
+             
+                <input type="hidden" name="_id" [(ngModel)]="registerService.selectedUser._id">
+                <p><input type="text" class="form-control" name="nombre" placeholder="Nombre" [(ngModel)]="registerService.selectedUser.nombre"></p>
+                <p><input type="text" class="form-control" name="apellido" placeholder="Apellido" [(ngModel)]="registerService.selectedUser.apellido"></p>
+                <p> <input type="text" class="form-control" name="nick" placeholder="Nick" [(ngModel)]="registerService.selectedUser.nick"></p>
+                <p><input type="text" class="form-control" name="pais" placeholder="Pais" [(ngModel)]="registerService.selectedUser.pais"></p>
+                
+            </div>
+
+            <div class="text-center">
+              <button class="btn btn-warning col-5">Actualizar</button>
+            </div>
+            <br><br><br>
+  
+          </form>
+
+          
+            <div class="card border-secondary">
+
+              
+
+              <div class="card-header text-center"><h2>Sube tu imagen :)</h2></div>
+                <input type="file" class=" btn btn-secondary" (change)="onPhotoSelect($event)" #photo>   
+            </div>
+            <button type="button" class="btn btn-primary col-12" (click)="newSaveImg()" >Guardar image</button>
+            <!--(click)="sendFile(photo)"-->
+
+        </div>
+      </div>
+      
+      <div class="col-2"></div>
+      <div class="col-md-4">
+        <div class="card card-body" *ngIf="previsualizacion">
+          <img [src]="previsualizacion" >
+        </div>
+      </div>
+    </div>
+  </div>

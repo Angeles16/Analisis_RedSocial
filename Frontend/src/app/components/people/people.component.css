@@ -1,0 +1,9 @@
+img {
+    border-radius: 100em;
+}
+
+#imgFont {
+    /*background: url(../../../assets/img/acces/imagen.jpg) no-repeat center top;*/
+    background-size: cover;
+    border-radius: 2em
+}

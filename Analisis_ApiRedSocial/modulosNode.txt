@@ -1,0 +1,29 @@
+//modulos principales
+npm install express mongoose morgan cors bcrypt jsonwebtoken passport passport-jwt 
+
+
+jsonwebtoken ==> intercambiar token entre el servidor y el navegador para verigicar si el usuario esta autenticado
+
+
+
+//dependencias de desarrollo 
+npm install -D typescript tsc-watch @types/bcrypt @types/cors @types/express @types/jsonwebtoken @types/mongoose @types/morgan @types/passport @types/passport-jwt
+
+
+ejecutar comando despues de compilar el codigo, para despues de ejecutar codigo compilarlo con node
+
+//archivo de configuracion de typescript ==> como va  a convertir el codigo 
+npx tsc --init 
+
+
+//MONGOSE PAGINATION
+npm install mongoose-pagination
+
+
+
+
+
+
+
+
+
